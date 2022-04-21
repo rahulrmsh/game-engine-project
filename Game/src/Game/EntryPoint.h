@@ -7,8 +7,10 @@
 
 int main(int argc ,char** argv)
 {
+	Game::Log::Init();
+	Game::Log::GetCoreLogger()->warn("initialized log !");
+	Game::Log::GetClientLogger()->info("Hello sxxa");
 	
-	printf("hello");
 
 	auto app = Game::CreateApplication();
 	app->Run();
