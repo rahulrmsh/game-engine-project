@@ -1,0 +1,3 @@
+[submodule "GammaEngine/vendor/spdlog"]
+	path = GammaEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
