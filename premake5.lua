@@ -18,6 +18,9 @@ project "GammaEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+	pchheader "gammaenginepzh.h"
+	pchsource "GammaEngine/src/gammaenginepzh.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

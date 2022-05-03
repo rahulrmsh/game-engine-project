@@ -34,6 +34,7 @@
     <ClInclude Include="src\GammaEngine\Log.h">
       <Filter>GammaEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\gammaenginepzh.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\GammaEngine\Log.cpp">
       <Filter>GammaEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\gammaenginepzh.cpp" />
   </ItemGroup>
 </Project>

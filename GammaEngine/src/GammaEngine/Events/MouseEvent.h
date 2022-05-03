@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace GammaEngine {
 
 	class GAMMAENGINE_API MouseMovedEvent : public Event
