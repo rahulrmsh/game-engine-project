@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../Core.h"
-
+#include "gammaenginepzh.h"
 
 namespace GammaEngine {
 	enum class EventType
