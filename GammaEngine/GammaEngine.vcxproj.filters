@@ -4,6 +4,9 @@
     <Filter Include="GammaEngine">
       <UniqueIdentifier>{DE93EA74-4A49-636A-D33D-5D413FF2596E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GammaEngine\Events">
+      <UniqueIdentifier>{027A7303-EE5D-3459-57BE-2EAC43C11EDB}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GammaEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\GammaEngine\EntryPoint.h">
       <Filter>GammaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Events\ApplicationEvent.h">
+      <Filter>GammaEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Events\Event.h">
+      <Filter>GammaEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Events\KeyEvent.h">
+      <Filter>GammaEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Events\MouseEvent.h">
+      <Filter>GammaEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\GammaEngine\Log.h">
       <Filter>GammaEngine</Filter>
