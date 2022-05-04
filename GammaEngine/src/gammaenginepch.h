@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-
+#include "GammaEngine/Log.h"
 
 #ifdef GAMMAENGINE_PLATFORM_WINDOWS
 	#include <Windows.h>

@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GammaEngine"
+    "\\GammaEngine",
+    "\\GammaEngine\\src",
+    "\\GammaEngine\\src\\GammaEngine",
+    "\\GammaEngine\\vendor\\GLFW",
+    "\\vendor"
   ],
-  "SelectedNode": "\\premake5.lua",
+  "SelectedNode": "\\GammaEngine\\src\\GammaEngine\\Application.cpp",
   "PreviewInSolutionExplorer": false
 }

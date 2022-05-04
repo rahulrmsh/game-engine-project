@@ -10,6 +10,11 @@ workspace "GammaEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "GammaEngine/vendor/GLFW/include"
+
+include "GammaEngine/vendor/GLFW"
+
 project "GammaEngine"
 	location "GammaEngine"
 	kind "SharedLib"
@@ -18,8 +23,8 @@ project "GammaEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
-	pchheader "gammaenginepzh.h"
-	pchsource "GammaEngine/src/gammaenginepzh.cpp"
+	pchheader "gammaenginepch.h"
+	pchsource "GammaEngine/src/gammaenginepch.cpp"
 
 	files
 	{
@@ -30,7 +35,14 @@ project "GammaEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

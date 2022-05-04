@@ -7,6 +7,12 @@
     <Filter Include="GammaEngine\Events">
       <UniqueIdentifier>{027A7303-EE5D-3459-57BE-2EAC43C11EDB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GammaEngine.h" />
@@ -34,7 +40,13 @@
     <ClInclude Include="src\GammaEngine\Log.h">
       <Filter>GammaEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\gammaenginepzh.h" />
+    <ClInclude Include="src\GammaEngine\Window.h">
+      <Filter>GammaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gammaenginepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
@@ -43,6 +55,9 @@
     <ClCompile Include="src\GammaEngine\Log.cpp">
       <Filter>GammaEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\gammaenginepzh.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gammaenginepch.cpp" />
   </ItemGroup>
 </Project>

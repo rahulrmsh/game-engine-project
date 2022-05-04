@@ -10,4 +10,12 @@
 	#error Gamma Engine only supports Windows!!!
 #endif 
 
+#ifdef GAMMAENGINE_ENABLE_ASSERTS
+	#define GAMMAENGINE_ASSERT(x, ...) { if(!(x)) { GAMMAENGINE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define GAMMAENGINE_CORE_ASSERT(x, ...) { if(!(x)) { GAMMAENGINE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define GAMMAENGINE_ASSERT(x, ...)
+	#define GAMMAENGINE_CORE_ASSERT(x, ...)
+#endif
+
 #define BIT(x) (1 << x)
