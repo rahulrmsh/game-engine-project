@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,6 +160,8 @@
     <ClInclude Include="src\GammaEngine\Events\Event.h" />
     <ClInclude Include="src\GammaEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\GammaEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\GammaEngine\Layer.h" />
+    <ClInclude Include="src\GammaEngine\LayerStack.h" />
     <ClInclude Include="src\GammaEngine\Log.h" />
     <ClInclude Include="src\GammaEngine\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -164,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp" />
+    <ClCompile Include="src\GammaEngine\Layer.cpp" />
+    <ClCompile Include="src\GammaEngine\LayerStack.cpp" />
     <ClCompile Include="src\GammaEngine\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\gammaenginepch.cpp">
