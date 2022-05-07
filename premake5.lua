@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "GammaEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "GammaEngine/vendor/Glad/include"
 
 include "GammaEngine/vendor/GLFW"
+include "GammaEngine/vendor/Glad"
 
 project "GammaEngine"
 	location "GammaEngine"
@@ -36,12 +38,14 @@ project "GammaEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "GammaEngine"
 		defines
 		{
 			"GAMMAENGINE_PLATFORM_WINDOWS",
-			"GAMMAENGINE_BUILD_DLL"
+			"GAMMAENGINE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
