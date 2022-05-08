@@ -67,6 +67,8 @@
     <ClInclude Include="src\gammaenginepch.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\GammaEngine\Input.h" />
+    <ClInclude Include="src\GammaEngine\KeyCodes.h" />
+    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">

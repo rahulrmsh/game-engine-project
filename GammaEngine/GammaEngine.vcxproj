@@ -159,9 +159,11 @@
     <ClInclude Include="src\GammaEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\GammaEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\GammaEngine\Input.h" />
+    <ClInclude Include="src\GammaEngine\KeyCodes.h" />
     <ClInclude Include="src\GammaEngine\Layer.h" />
     <ClInclude Include="src\GammaEngine\LayerStack.h" />
     <ClInclude Include="src\GammaEngine\Log.h" />
+    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\GammaEngine\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />

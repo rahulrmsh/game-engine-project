@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		GAMMAENGINE_CLIENT_INFO("ExampleLayer::Update");
+		if (GammaEngine::Input::IsKeyPressed(GAMMAENGINE_KEY_TAB))
+			GAMMAENGINE_CLIENT_TRACE("Tab key is pressed (poll)!");
 	}
 
 	void OnEvent(GammaEngine::Event& event) override
 	{
-		GAMMAENGINE_CLIENT_TRACE("{0}", event);
+		if (event.GetEventType() == GammaEngine::EventType::KeyPressed)
+		{
+			GammaEngine::KeyPressedEvent& e = (GammaEngine::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == GAMMAENGINE_KEY_TAB)
+				GAMMAENGINE_CLIENT_TRACE("Tab key is pressed (event)!");
+			GAMMAENGINE_CLIENT_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 
 };
