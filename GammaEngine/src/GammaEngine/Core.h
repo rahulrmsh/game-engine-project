@@ -10,6 +10,10 @@
 	#error Gamma Engine only supports Windows!!!
 #endif 
 
+#ifdef GAMMAENGINE_DEBUG
+	#define GAMMAENGINE_ENABLE_ASSERTS
+#endif
+
 #ifdef GAMMAENGINE_ENABLE_ASSERTS
 	#define GAMMAENGINE_ASSERT(x, ...) { if(!(x)) { GAMMAENGINE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define GAMMAENGINE_CORE_ASSERT(x, ...) { if(!(x)) { GAMMAENGINE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
@@ -20,4 +24,4 @@
 
 #define BIT(x) (1 << x)
 
-#define HZ_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+#define GAMMAENGINE_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

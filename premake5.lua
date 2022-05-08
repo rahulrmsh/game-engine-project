@@ -1,6 +1,6 @@
 workspace "GammaEngine"
 	architecture "x64"
-	
+	startproject "Sandbox"
 	configurations
 	{
 		"Debug",
@@ -24,6 +24,7 @@ project "GammaEngine"
 	location "GammaEngine"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +57,6 @@ project "GammaEngine"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -73,23 +73,24 @@ project "GammaEngine"
 
 	filter "configurations:Debug"
 		defines "GAMMAENGINE_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "GAMMAENGINE_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "GAMMAENGINE_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -113,7 +114,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -123,15 +123,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "GAMMAENGINE_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "GAMMAENGINE_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "GAMMAENGINE_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"

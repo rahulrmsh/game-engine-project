@@ -1,6 +1,9 @@
 .vs/
 bin/
 bin-int/
-*.user
+
 .vscode
 .gitignore
+!.vs/slnx.sqlite
+
+*.user
