@@ -65,6 +65,8 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\gammaenginepch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\GammaEngine\Input.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
@@ -89,5 +91,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\gammaenginepch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
