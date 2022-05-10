@@ -1,4 +1,5 @@
 #include "GammaEngine.h"
+#include "imgui.h"
 
 class ExampleLayer : public GammaEngine::Layer
 {
@@ -12,6 +13,13 @@ public:
 	{
 		if (GammaEngine::Input::IsKeyPressed(GAMMAENGINE_KEY_TAB))
 			GAMMAENGINE_CLIENT_TRACE("Tab key is pressed (poll)!");
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
 	}
 
 	void OnEvent(GammaEngine::Event& event) override
@@ -33,13 +41,13 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new GammaEngine::ImGuiLayer());
 	}
 
 	~Sandbox()
 	{
 
 	}
+
 };
 
 GammaEngine::Application* GammaEngine::CreateApplication()
