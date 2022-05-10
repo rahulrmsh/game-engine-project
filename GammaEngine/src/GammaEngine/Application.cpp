@@ -4,6 +4,8 @@
 #include <glad/glad.h>
 #include "Input.h"
 
+
+
 namespace GammaEngine {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)

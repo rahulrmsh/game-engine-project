@@ -14,6 +14,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "GammaEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "GammaEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "GammaEngine/vendor/imgui"
+IncludeDir["glm"] = "GammaEngine/vendor/glm"
 
 include "GammaEngine/vendor/GLFW"
 include "GammaEngine/vendor/Glad"
@@ -35,7 +36,9 @@ project "GammaEngine"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -44,7 +47,8 @@ project "GammaEngine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links 
@@ -104,7 +108,8 @@ project "Sandbox"
 	includedirs
 	{
 		"GammaEngine/vendor/spdlog/include",
-		"GammaEngine/src"
+		"GammaEngine/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
