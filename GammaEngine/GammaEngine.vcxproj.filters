@@ -1333,6 +1333,9 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Shader.h" />
+    <ClInclude Include="src\GammaEngine\Renderer\Buffer.h" />
+    <ClInclude Include="src\GammaEngine\Renderer\Renderer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
@@ -1359,5 +1362,8 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Shader.cpp" />
+    <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\GammaEngine\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
   </ItemGroup>
 </Project>
