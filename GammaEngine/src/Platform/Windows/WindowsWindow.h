@@ -1,7 +1,7 @@
 #pragma once
 
 #include "GammaEngine/Window.h"
-
+#include "GammaEngine/Renderer/GraphicsContext.h"
 #include <GLFW/glfw3.h>
 
 namespace GammaEngine {
@@ -27,7 +27,7 @@ namespace GammaEngine {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
-
+		GraphicsContext* m_Context;
 		struct WindowData
 		{
 			std::string Title;

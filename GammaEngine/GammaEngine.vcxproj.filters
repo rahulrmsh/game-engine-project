@@ -13,12 +13,6 @@
     <Filter Include="src\GammaEngine\ImGui">
       <UniqueIdentifier>{5F406436-CBAC-1F31-94A0-B78E00CC4199}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Platform\Windows">
-      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Platform\Windows">
-      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -69,12 +63,6 @@
     <ClInclude Include="src\GammaEngine\ImGui\ImGuiLayer.h">
       <Filter>src\GammaEngine\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\GammaEngine\Input.h">
-      <Filter>GammaEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\GammaEngine\KeyCodes.h">
-      <Filter>GammaEngine</Filter>
-    </ClInclude>
     <ClInclude Include="src\GammaEngine\Layer.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
@@ -84,19 +72,10 @@
     <ClInclude Include="src\GammaEngine\Log.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h">
-      <Filter>GammaEngine</Filter>
-    </ClInclude>
     <ClInclude Include="src\GammaEngine\Window.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
-      <Filter>Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
-      <Filter>src\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>src\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\gammaenginepch.h">
@@ -1348,13 +1327,17 @@
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
     <ClInclude Include="src\gammaenginepch.h" />
+    <ClInclude Include="src\GammaEngine\Input.h" />
+    <ClInclude Include="src\GammaEngine\KeyCodes.h" />
+    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
       <Filter>src\GammaEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GammaEngine\ImGui\ImGuiBuild.cpp">
-      <Filter>GammaEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\GammaEngine\ImGui</Filter>
@@ -1368,15 +1351,13 @@
     <ClCompile Include="src\GammaEngine\Log.cpp">
       <Filter>src\GammaEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
-      <Filter>Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
-      <Filter>src\Platform\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="src\gammaenginepch.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\gammaenginepch.cpp" />
+    <ClCompile Include="src\GammaEngine\ImGui\ImGuiBuild.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
   </ItemGroup>
 </Project>

@@ -155,7 +155,9 @@
     <ClInclude Include="src\GammaEngine\LayerStack.h" />
     <ClInclude Include="src\GammaEngine\Log.h" />
     <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
+    <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\GammaEngine\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\gammaenginepch.h" />
@@ -582,6 +584,7 @@
     <ClCompile Include="src\GammaEngine\Layer.cpp" />
     <ClCompile Include="src\GammaEngine\LayerStack.cpp" />
     <ClCompile Include="src\GammaEngine\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\gammaenginepch.cpp">
