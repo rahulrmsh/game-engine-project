@@ -8,7 +8,7 @@
 #include "GammaEngine/Events/Event.h"
 #include "GammaEngine/Events/ApplicationEvent.h"
 #include "GammaEngine/ImGui/ImGuiLayer.h"
-
+#include "GammaEngine/Renderer/Shader.h"
 namespace GammaEngine {
 
 	class GAMMAENGINE_API Application
@@ -30,6 +30,7 @@ namespace GammaEngine {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 		static Application* s_Instance;
 	};
 
