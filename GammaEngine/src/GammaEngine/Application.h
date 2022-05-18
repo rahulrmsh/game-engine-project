@@ -11,7 +11,7 @@
 #include "GammaEngine/Renderer/Shader.h"
 #include "GammaEngine/Renderer/Buffer.h"
 #include "GammaEngine/Renderer/VertexArray.h"
-
+#include "GammaEngine/Renderer/OrthographicCamera.h"
 namespace GammaEngine {
 
 	class GAMMAENGINE_API Application
@@ -25,6 +25,7 @@ namespace GammaEngine {
 		void PushOverlay(Layer* layer);
 		inline Window& GetWindow() { return *m_Window; }
 		inline static Application& Get() { return *s_Instance; }
+		OrthographicCamera m_Camera;
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
