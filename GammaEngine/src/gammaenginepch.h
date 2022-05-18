@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef GAMMAENGINE_PLATFORM_WINDOWS
+#include <windows.h>
+#endif // GAMMAENGINE_PLATFORM_WINDOWS
+
 #include <iostream>
 #include <memory>
 #include <utility>
@@ -16,6 +20,3 @@
 
 #include "GammaEngine/Log.h"
 
-#ifdef GAMMAENGINE_PLATFORM_WINDOWS
-	#include <Windows.h>
-#endif // GAMMAENGINE_PLATFORM_WINDOWS
