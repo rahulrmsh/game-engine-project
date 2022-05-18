@@ -2,6 +2,17 @@
 #include "Renderer.h"
 
 namespace GammaEngine {
+	void Renderer::BeginScene()
+	{
+	}
 
-	RendererAPI Renderer::s_RendererAPI = RendererAPI::OpenGL;
+	void Renderer::EndScene()
+	{
+	}
+
+	void Renderer::Submit(const std::shared_ptr<VertexArray>& vertexArray)
+	{
+		vertexArray->Bind();
+		RenderCommand::DrawIndexed(vertexArray);
+	}
 }

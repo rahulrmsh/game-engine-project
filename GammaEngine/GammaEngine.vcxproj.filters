@@ -13,6 +13,18 @@
     <Filter Include="src\GammaEngine\ImGui">
       <UniqueIdentifier>{5F406436-CBAC-1F31-94A0-B78E00CC4199}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GammaEngine\Renderer">
+      <UniqueIdentifier>{BB3E74AF-A763-C32F-D0AE-A8BFBC32C24D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform">
+      <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\OpenGL">
+      <UniqueIdentifier>{35A49437-A105-7245-2A73-B8F796D3A804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Platform\Windows">
+      <UniqueIdentifier>{5B054582-4794-CE4B-F0B2-E246DC20DFF1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -63,6 +75,12 @@
     <ClInclude Include="src\GammaEngine\ImGui\ImGuiLayer.h">
       <Filter>src\GammaEngine\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\GammaEngine\Input.h">
+      <Filter>src\GammaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\KeyCodes.h">
+      <Filter>src\GammaEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\GammaEngine\Layer.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
@@ -72,8 +90,50 @@
     <ClInclude Include="src\GammaEngine\Log.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h">
+      <Filter>src\GammaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\Buffer.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\RenderCommand.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\Renderer.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\RendererAPI.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\Shader.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\VertexArray.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\GammaEngine\Window.h">
       <Filter>src\GammaEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>src\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\gammaenginepch.h">
       <Filter>src</Filter>
@@ -1323,25 +1383,13 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\gammaenginepch.h" />
-    <ClInclude Include="src\GammaEngine\Input.h" />
-    <ClInclude Include="src\GammaEngine\KeyCodes.h" />
-    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\GammaEngine\Renderer\Shader.h" />
-    <ClInclude Include="src\GammaEngine\Renderer\Buffer.h" />
-    <ClInclude Include="src\GammaEngine\Renderer\Renderer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
-    <ClInclude Include="src\GammaEngine\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
       <Filter>src\GammaEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\ImGui\ImGuiBuild.cpp">
+      <Filter>src\GammaEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\GammaEngine\ImGui</Filter>
@@ -1355,19 +1403,44 @@
     <ClCompile Include="src\GammaEngine\Log.cpp">
       <Filter>src\GammaEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\RenderCommand.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\Renderer.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\RendererAPI.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\Shader.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\VertexArray.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\gammaenginepch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\gammaenginepch.cpp" />
-    <ClCompile Include="src\GammaEngine\ImGui\ImGuiBuild.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
-    <ClCompile Include="src\GammaEngine\Renderer\Shader.cpp" />
-    <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp" />
-    <ClCompile Include="src\GammaEngine\Renderer\Renderer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
-    <ClCompile Include="src\GammaEngine\Renderer\VertexArray.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
   </ItemGroup>
 </Project>

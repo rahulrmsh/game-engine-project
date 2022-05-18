@@ -10,8 +10,8 @@ namespace GammaEngine {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:    GAMMAENGINE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::OpenGL:  return new OpenGLVertexArray();
+			case RendererAPI::API::None:    GAMMAENGINE_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+			case RendererAPI::API::OpenGL:  return new OpenGLVertexArray();
 		}
 
 		GAMMAENGINE_CORE_ASSERT(false, "Unknown RendererAPI!");
