@@ -8,6 +8,7 @@
 #include "GammaEngine/Events/Event.h"
 #include "GammaEngine/Events/ApplicationEvent.h"
 #include "GammaEngine/ImGui/ImGuiLayer.h"
+#include "GammaEngine/Core/Timestep.h"
 
 namespace GammaEngine {
 
@@ -32,6 +33,7 @@ namespace GammaEngine {
 		LayerStack m_LayerStack;
 		
 		static Application* s_Instance;
+		float m_LastFrameTime = 0.0f;
 	};
 
 	Application* CreateApplication();

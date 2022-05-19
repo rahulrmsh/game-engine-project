@@ -1384,6 +1384,7 @@
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
     <ClInclude Include="src\GammaEngine\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\GammaEngine\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">

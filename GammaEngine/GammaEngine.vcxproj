@@ -143,6 +143,7 @@
     <ClInclude Include="src\GammaEngine.h" />
     <ClInclude Include="src\GammaEngine\Application.h" />
     <ClInclude Include="src\GammaEngine\Core.h" />
+    <ClInclude Include="src\GammaEngine\Core\Timestep.h" />
     <ClInclude Include="src\GammaEngine\EntryPoint.h" />
     <ClInclude Include="src\GammaEngine\Events\ApplicationEvent.h" />
     <ClInclude Include="src\GammaEngine\Events\Event.h" />

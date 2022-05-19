@@ -1,6 +1,7 @@
 #include "GammaEngine.h"
 #include "imgui.h"
 
+
 class ExampleLayer : public GammaEngine::Layer
 {
 public:
@@ -110,8 +111,9 @@ public:
 		m_BlueShader.reset(new GammaEngine::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
 
-	void OnUpdate() override
+	void OnUpdate(GammaEngine::Timestep ts) override
 	{
+		GAMMAENGINE_CLIENT_TRACE("Delta time: {0}s ({1} ms) ", ts.GetSecoonds(). ts.GetMilliseconds());
 		if (GammaEngine::Input::IsKeyPressed(GAMMAENGINE_KEY_LEFT))
 			m_CameraPosition.x -= m_CameraMoveSpeed;
 		else if (GammaEngine::Input::IsKeyPressed(GAMMAENGINE_KEY_RIGHT))

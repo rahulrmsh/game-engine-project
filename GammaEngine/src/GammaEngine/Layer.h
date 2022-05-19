@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GammaEngine/Core.h"
+#include "GammaEngine/Core/Timestep.h"
 #include "GammaEngine/Events/Event.h"
 
 namespace GammaEngine {
@@ -13,7 +14,7 @@ namespace GammaEngine {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 
