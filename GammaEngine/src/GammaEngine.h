@@ -8,7 +8,6 @@
 #include "GammaEngine/Input.h"
 #include "GammaEngine/KeyCodes.h"
 #include "GammaEngine/MouseButtonCodes.h"
-
 #include "GammaEngine/Core/Timestep.h"
 
 //-----Renderer--------
