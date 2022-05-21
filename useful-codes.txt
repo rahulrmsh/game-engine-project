@@ -1,0 +1,20 @@
+BEFORE PULLING
+````````````````````````````
+Step 1.0 : git status
+Step 1.1 : if uncommitted changes are found 
+		1. git add .
+		2. git stash
+Step 2.0 : git pull --rebase
+
+````````````````````````````
+BEFORE PUSHING
+````````````````````````````
+Step 1.0 : git status
+Step 2.0 : git add .
+Step 3.0 : git commit -m "[***NAME***] | [Add/Test/Error/Fix]. ***Message***"
+Step 4.0 : git push
+````````````````````````````
+
+Generate Commit Log : git --no-pager log --oneline > commit-log.txt
+Add Changes to Previous Commit : git commit --amend --no-edit
+ 

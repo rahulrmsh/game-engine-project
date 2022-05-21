@@ -1,0 +1,42 @@
+7841333 [Rahul] | Fix. Macro Invocations And Edge Cases
+548ea50 [Rahul] | Add. Orthographic Camera
+458c50b [Rahul] | Add. RendererAPI And Render Command Architecture
+bbf0594 [Rahul] | Fix. Macro Name
+865473e [Rahul] | Add. Vertex Array Support
+a5ee8c6 [Rahul] | Add. Buffer Layout Descriptors For Vertex Buffers
+ab91963 [Rahul] | Add. OpenGL Buffer Abstraction
+86dc25d [Rahul] | Fix. Log Status
+72b5f65 [Rahul] | Test. Shader
+6d2a544 [Rahul] | Test. Renderer
+faac7d8 [Rahul] | Fix. Stopped Tracking Imgui
+b48985e [Rahul] | Add. OpenGL Context Class
+6dd6356 [Rahul] | Add. Docking and Viewports Capabilities
+2851a97 [Ullas] | Add. Math Engine - GLM
+316ef66 [Rahul] | Add. Key And Mouse Codes
+05952dd [Rahul] | Add. Input Polling
+a728931 [Rahul] | Refactor. Premake File
+c96ce19 [Rahul] | Fix. VSC Solution Update
+478260b [Rahul] | Add. Events to ImGui Layers
+a646569 [Rahul] | Add. ImGui
+1a0056b [Rahul] | Add. Glad
+ce2db4a [Rahul] | Add. Layers
+0324373 [Rahul] | Add. Window Events
+738a76e [Rahul] | Add. Vendor Files
+e120d08 [Rahul] | Add. Window Abstraction and GLFW
+e664453 [Rahul] | Fix. Event Compile Error - pch
+b2cb119 [Rahul] | Add. Precompiled Headers
+3d5774d [Rahul] | Add. Event Handling System - Mouse/Key Input
+c3e2d2f [Rahul] | Add. Premake Setup And Configuration
+16db130 [Rahul] | Add. Log System
+390163f [Rahul] | Add. Complete Entry Point
+e14a3ec [Rahul] | Add. Entry Point
+c8e9d65 [Rahul] | Add. Empty C++ Project
+e81eb27 [Rahul] | Fix. Unresolved Bug
+a3bff97 [Ullas] | Add. Logging
+3ff25e8 [Ullas] | Add. Setup
+7ff25ab [Ullas] | Add. Project Setup
+aba5f7d [Ullas] | Add. Entry Point
+395402f [Rahul] | Fix. README file
+de59f1f [Rahul] | Add. README file
+48c621a [Rahul] | Add. Source Folder
+5ea280f initial commit
