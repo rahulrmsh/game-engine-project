@@ -7,6 +7,9 @@
     <Filter Include="src\GammaEngine">
       <UniqueIdentifier>{75C7C48C-E152-3251-EA63-B545566E8E51}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GammaEngine\Core">
+      <UniqueIdentifier>{EDDC3D6E-D96B-C737-828A-DB326EF8D7DD}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\GammaEngine\Events">
       <UniqueIdentifier>{B9DD4AFA-A5D7-734C-8E44-0A5D7ADDD9B8}</UniqueIdentifier>
     </Filter>
@@ -57,6 +60,9 @@
     <ClInclude Include="src\GammaEngine\Core.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GammaEngine\Core\Timestep.h">
+      <Filter>src\GammaEngine\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\GammaEngine\EntryPoint.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
@@ -97,6 +103,9 @@
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\OrthographicCamera.h">
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\GammaEngine\Renderer\RenderCommand.h">
@@ -1383,8 +1392,6 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
-    <ClInclude Include="src\GammaEngine\Renderer\OrthographicCamera.h" />
-    <ClInclude Include="src\GammaEngine\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GammaEngine\Application.cpp">
@@ -1406,6 +1413,9 @@
       <Filter>src\GammaEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\OrthographicCamera.cpp">
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\Renderer\RenderCommand.cpp">
@@ -1444,6 +1454,5 @@
     <ClCompile Include="src\gammaenginepch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GammaEngine\Renderer\OrthographicCamera.cpp" />
   </ItemGroup>
 </Project>

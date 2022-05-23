@@ -19,6 +19,7 @@ namespace GammaEngine {
 		shader->UploadUniformMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
 		shader->UploadUniformMat4("u_Transform", transform);
 
+		
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);
 	}
