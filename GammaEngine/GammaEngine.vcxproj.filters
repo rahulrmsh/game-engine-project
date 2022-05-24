@@ -52,21 +52,6 @@
     <Filter Include="vendor\stb_image">
       <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vendor\stb_image\deprecated">
-      <UniqueIdentifier>{8DC87CC4-F9D5-AAAA-82BC-A695EEC87661}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vendor\stb_image\tests">
-      <UniqueIdentifier>{AFA0F601-9B9A-1F54-8407-B66470A085C0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vendor\stb_image\tests\caveview">
-      <UniqueIdentifier>{D8D269FA-44B6-783A-4DB9-A676B91B3F8B}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vendor\stb_image\tests\oversample">
-      <UniqueIdentifier>{FC03A82B-6872-FDAA-B15B-B8AA1D09F346}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vendor\stb_image\tests\prerelease">
-      <UniqueIdentifier>{E603DB3D-5272-30BD-9B5B-EBBC07092659}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GammaEngine.h">
