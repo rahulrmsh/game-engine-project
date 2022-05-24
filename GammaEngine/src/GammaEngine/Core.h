@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #ifdef GAMMAENGINE_PLATFORM_WINDOWS
 #if GAMMAENGINE_DYNAMIC_LINK
 	#ifdef GAMMAENGINE_BUILD_DLL
@@ -29,3 +31,13 @@
 #define BIT(x) (1 << x)
 
 #define GAMMAENGINE_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+
+namespace GammaEngine {
+
+	template<typename T>
+	using Scope = std::unique_ptr<T>;
+
+	template<typename T>
+	using Ref = std::shared_ptr<T>;
+
+}
