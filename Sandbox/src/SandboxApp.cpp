@@ -149,6 +149,7 @@ public:
 		m_TextureShader.reset(GammaEngine::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
 		m_Texture = GammaEngine::Texture2D::Create("assets/textures/Checkerboard.png");
+		m_ChernoLogoTexture = GammaEngine::Texture2D::Create("assets/textures/GammaEngine.png");
 
 		std::dynamic_pointer_cast<GammaEngine::OpenGLShader>(m_TextureShader)->Bind();
 		std::dynamic_pointer_cast<GammaEngine::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
@@ -196,6 +197,9 @@ public:
 
 		m_Texture->Bind();
 		GammaEngine::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		m_ChernoLogoTexture->Bind();
+		GammaEngine::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+
 
 		// Triangle
 		// GammaEngine::Renderer::Submit(m_Shader, m_VertexArray);
@@ -220,7 +224,7 @@ private:
 	GammaEngine::Ref<GammaEngine::Shader> m_FlatColorShader, m_TextureShader;
 	GammaEngine::Ref<GammaEngine::VertexArray> m_SquareVA;
 
-	GammaEngine::Ref<GammaEngine::Texture2D> m_Texture;
+	GammaEngine::Ref<GammaEngine::Texture2D> m_Texture, m_ChernoLogoTexture;
 
 	GammaEngine::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
