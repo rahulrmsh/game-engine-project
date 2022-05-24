@@ -10,3 +10,6 @@
 [submodule "GammaEngine/vendor/glm"]
 	path = GammaEngine/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "GammaEngine/vendor/stb_image"]
+	path = GammaEngine/vendor/stb_image
+	url = https://github.com/nothings/stb

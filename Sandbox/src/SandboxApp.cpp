@@ -1,8 +1,8 @@
 #include <GammaEngine.h>
 
-#include "imgui.h"
-
 #include "Platform/OpenGL/OpenGLShader.h"
+
+#include "imgui.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -21,7 +21,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<GammaEngine::VertexBuffer> vertexBuffer;
+		GammaEngine::Ref<GammaEngine::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(GammaEngine::VertexBuffer::Create(vertices, sizeof(vertices)));
 		GammaEngine::BufferLayout layout = {
 			{ GammaEngine::ShaderDataType::Float3, "a_Position" },
@@ -31,28 +31,29 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<GammaEngine::IndexBuffer> indexBuffer;
+		GammaEngine::Ref<GammaEngine::IndexBuffer> indexBuffer;
 		indexBuffer.reset(GammaEngine::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		m_SquareVA.reset(GammaEngine::VertexArray::Create());
 
-		float squareVertices[3 * 4] = {
-			-0.5f, -0.5f, 0.0f,
-			 0.5f, -0.5f, 0.0f,
-			 0.5f,  0.5f, 0.0f,
-			-0.5f,  0.5f, 0.0f
+		float squareVertices[5 * 4] = {
+			-0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+			 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+			 0.5f,  0.5f, 0.0f, 1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
-		std::shared_ptr<GammaEngine::VertexBuffer> squareVB;
+		GammaEngine::Ref<GammaEngine::VertexBuffer> squareVB;
 		squareVB.reset(GammaEngine::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
-			{ GammaEngine::ShaderDataType::Float3, "a_Position" }
+			{ GammaEngine::ShaderDataType::Float3, "a_Position" },
+			{ GammaEngine::ShaderDataType::Float2, "a_TexCoord" }
 			});
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<GammaEngine::IndexBuffer> squareIB;
+		GammaEngine::Ref<GammaEngine::IndexBuffer> squareIB;
 		squareIB.reset(GammaEngine::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -69,7 +70,7 @@ public:
 			{
 				v_Position = a_Position;
 				v_Color = a_Color;
-				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
 			}
 		)";
 
@@ -98,7 +99,7 @@ public:
 			void main()
 			{
 				v_Position = a_Position;
-				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
 			}
 		)";
 
@@ -107,8 +108,8 @@ public:
 			
 			layout(location = 0) out vec4 color;
 			in vec3 v_Position;
-			uniform vec4 u_Color;
-
+			
+			uniform vec3 u_Color;
 			void main()
 			{
 				color = vec4(u_Color, 1.0);
@@ -116,6 +117,41 @@ public:
 		)";
 
 		m_FlatColorShader.reset(GammaEngine::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+
+		std::string textureShaderVertexSrc = R"(
+			#version 330 core
+			
+			layout(location = 0) in vec3 a_Position;
+			layout(location = 1) in vec2 a_TexCoord;
+			uniform mat4 u_ViewProjection;
+			uniform mat4 u_Transform;
+			out vec2 v_TexCoord;
+			void main()
+			{
+				v_TexCoord = a_TexCoord;
+				gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);	
+			}
+		)";
+
+		std::string textureShaderFragmentSrc = R"(
+			#version 330 core
+			
+			layout(location = 0) out vec4 color;
+			in vec2 v_TexCoord;
+			
+			uniform sampler2D u_Texture;
+			void main()
+			{
+				color = texture(u_Texture, v_TexCoord);
+			}
+		)";
+
+		m_TextureShader.reset(GammaEngine::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
+
+		m_Texture = GammaEngine::Texture2D::Create("assets/textures/Checkerboard.png");
+
+		std::dynamic_pointer_cast<GammaEngine::OpenGLShader>(m_TextureShader)->Bind();
+		std::dynamic_pointer_cast<GammaEngine::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(GammaEngine::Timestep ts) override
@@ -131,7 +167,7 @@ public:
 			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 
 		if (GammaEngine::Input::IsKeyPressed(GAMMAENGINE_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed + ts;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		if (GammaEngine::Input::IsKeyPressed(GAMMAENGINE_KEY_D))
 			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
@@ -144,11 +180,10 @@ public:
 		GammaEngine::Renderer::BeginScene(m_Camera);
 
 		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
+
 		std::dynamic_pointer_cast<GammaEngine::OpenGLShader>(m_FlatColorShader)->Bind();
 		std::dynamic_pointer_cast<GammaEngine::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
 
-		glm::vec4 redColor(0.8f, 0.2f, 0.3f, 1.0f);
-		glm::vec4 blueColor(0.2f, 0.3f, 0.8f, 1.0f);
 		for (int y = 0; y < 20; y++)
 		{
 			for (int x = 0; x < 20; x++)
@@ -158,7 +193,12 @@ public:
 				GammaEngine::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
 			}
 		}
-		GammaEngine::Renderer::Submit(m_Shader, m_VertexArray);
+
+		m_Texture->Bind();
+		GammaEngine::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+
+		// Triangle
+		// GammaEngine::Renderer::Submit(m_Shader, m_VertexArray);
 
 		GammaEngine::Renderer::EndScene();
 	}
@@ -174,11 +214,13 @@ public:
 	{
 	}
 private:
-	std::shared_ptr<GammaEngine::Shader> m_Shader;
-	std::shared_ptr<GammaEngine::VertexArray> m_VertexArray;
+	GammaEngine::Ref<GammaEngine::Shader> m_Shader;
+	GammaEngine::Ref<GammaEngine::VertexArray> m_VertexArray;
 
-	std::shared_ptr<GammaEngine::Shader> m_FlatColorShader;
-	std::shared_ptr<GammaEngine::VertexArray> m_SquareVA;
+	GammaEngine::Ref<GammaEngine::Shader> m_FlatColorShader, m_TextureShader;
+	GammaEngine::Ref<GammaEngine::VertexArray> m_SquareVA;
+
+	GammaEngine::Ref<GammaEngine::Texture2D> m_Texture;
 
 	GammaEngine::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;

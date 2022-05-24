@@ -17,6 +17,7 @@
 #include "GammaEngine/Renderer/Shader.h"
 #include "GammaEngine/Renderer/VertexArray.h"
 #include "GammaEngine/Renderer/OrthographicCamera.h"
+#include "GammaEngine/Renderer/Texture.h"
 // ---Start Entry Point---
 #include "GammaEngine/EntryPoint.h"
 // ---End Entry Point---

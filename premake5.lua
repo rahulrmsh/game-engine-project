@@ -15,6 +15,7 @@ IncludeDir["GLFW"] = "GammaEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "GammaEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "GammaEngine/vendor/imgui"
 IncludeDir["glm"] = "GammaEngine/vendor/glm"
+IncludeDir["stb_image"] = "GammaEngine/vendor/stb_image"
 
 include "GammaEngine/vendor/GLFW"
 include "GammaEngine/vendor/Glad"
@@ -38,6 +39,8 @@ project "GammaEngine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
@@ -54,7 +57,8 @@ project "GammaEngine"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links 
