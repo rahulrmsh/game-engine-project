@@ -7,6 +7,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include"GammaEngine/Renderer/Shader.h"
+
 class ExampleLayer : public GammaEngine::Layer
 {
 public:
@@ -87,7 +89,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(GammaEngine::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = GammaEngine::Shader::Create("VertexPosColor",vertexSrc, fragmentSrc);
 
 		
 
@@ -118,11 +120,11 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(GammaEngine::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader=GammaEngine::Shader::Create("FlatColor",flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 
 		
 
-		m_TextureShader.reset(GammaEngine::Shader::Create("assets/shaders/Texture.glsl"));
+		m_TextureShader = GammaEngine::Shader::Create("assets/shaders/Texture.glsl");
 
 		m_Texture = GammaEngine::Texture2D::Create("assets/textures/Checkerboard.png");
 		m_ChernoLogoTexture = GammaEngine::Texture2D::Create("assets/textures/GammaEngine.png");

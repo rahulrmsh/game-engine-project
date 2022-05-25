@@ -22,11 +22,20 @@ namespace GammaEngine {
 	}
 	OpenGLShader::OpenGLShader(const std::string& filepath)
 	{
+
 		std::string source=ReadFile(filepath);
 		auto shaderSources = PreProcess(source);
 		Compile(shaderSources);
+
+		//extract name from filepath
+		auto lastSlash = filepath.find_first_of("/\\");
+		lastSlash = lastSlash == std::string::npos ? 0 : lastSlash + 1;
+		auto lastDot = filepath.rfind('.');
+		auto count = lastDot == std::string::npos ? filepath.size() - lastSlash : lastDot - lastSlash;
+		m_Name = filepath.substr(lastSlash, count);
 	}
-	OpenGLShader::OpenGLShader(const std::string& vertexSrc, const std::string& fragmentSrc)
+	OpenGLShader::OpenGLShader(const std::string& name,const std::string& vertexSrc, const std::string& fragmentSrc)
+		:m_Name(name)
 	{
 		// Create an empty vertex shader handle
 		std::unordered_map<GLenum, std::string> sources;
@@ -83,7 +92,9 @@ namespace GammaEngine {
 	void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaderSources)
 	{
 		GLuint program = glCreateProgram();
-		std::vector<GLenum> glShaderIDs(shaderSources.size());
+		GAMMAENGINE_CORE_ASSERT(shaderSources.size() <= 2, "only support 2 shaders for now");
+		std::array<GLenum,2> glShaderIDs;
+		int glshaderIDIndex = 0;
 		for (auto& kv : shaderSources)
 		{
 			GLenum type = kv.first;
@@ -114,7 +125,7 @@ namespace GammaEngine {
 				break;
 			}
 			glAttachShader(program, shader);
-			glShaderIDs.push_back(shader);
+			glShaderIDs[glshaderIDIndex++]=shader;
 		}
 		
 		
