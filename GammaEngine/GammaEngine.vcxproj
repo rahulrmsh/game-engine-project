@@ -160,6 +160,7 @@
     <ClInclude Include="src\GammaEngine\LayerStack.h" />
     <ClInclude Include="src\GammaEngine\Log.h" />
     <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
+    <ClInclude Include="src\GammaEngine\OrthographicCameraController.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Buffer.h" />
     <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\GammaEngine\Renderer\OrthographicCamera.h" />
@@ -603,6 +604,7 @@
     <ClCompile Include="src\GammaEngine\Layer.cpp" />
     <ClCompile Include="src\GammaEngine\LayerStack.cpp" />
     <ClCompile Include="src\GammaEngine\Log.cpp" />
+    <ClCompile Include="src\GammaEngine\OrthographicCameraController.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\RenderCommand.cpp" />

@@ -9,6 +9,7 @@
 #include "GammaEngine/KeyCodes.h"
 #include "GammaEngine/MouseButtonCodes.h"
 #include "GammaEngine/Core/Timestep.h"
+#include "GammaEngine/OrthographicCameraController.h"
 
 //-----Renderer--------
 #include "GammaEngine/Renderer/Renderer.h"

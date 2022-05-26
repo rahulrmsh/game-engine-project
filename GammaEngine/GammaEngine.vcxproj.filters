@@ -102,6 +102,9 @@
     <ClInclude Include="src\GammaEngine\MouseButtonCodes.h">
       <Filter>src\GammaEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\GammaEngine\OrthographicCameraController.h">
+      <Filter>src\GammaEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\GammaEngine\Renderer\Buffer.h">
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClInclude>
@@ -1425,6 +1428,9 @@
       <Filter>src\GammaEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\Log.cpp">
+      <Filter>src\GammaEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\OrthographicCameraController.cpp">
       <Filter>src\GammaEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp">
