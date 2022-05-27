@@ -179,6 +179,7 @@ public:
 	void OnEvent(GammaEngine::Event& e) override
 	{
 		m_CameraController.OnEvent(e);
+		
 	}
 private:
 	GammaEngine::Ref<GammaEngine::Shader> m_Shader;
