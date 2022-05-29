@@ -167,6 +167,7 @@
     <ClInclude Include="src\GammaEngine\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\GammaEngine\Renderer\RenderCommand.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Renderer.h" />
+    <ClInclude Include="src\GammaEngine\Renderer\Renderer2D.h" />
     <ClInclude Include="src\GammaEngine\Renderer\RendererAPI.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Shader.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Texture.h" />
@@ -609,6 +610,7 @@
     <ClCompile Include="src\GammaEngine\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\GammaEngine\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Shader.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Texture.cpp" />

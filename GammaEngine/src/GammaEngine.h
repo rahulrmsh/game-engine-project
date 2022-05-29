@@ -19,3 +19,4 @@
 #include "GammaEngine/Renderer/VertexArray.h"
 #include "GammaEngine/Renderer/OrthographicCamera.h"
 #include "GammaEngine/Renderer/Texture.h"
+#include "GammaEngine/Renderer/Renderer2D.h"

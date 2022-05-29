@@ -123,6 +123,9 @@
     <ClInclude Include="src\GammaEngine\Renderer\Renderer.h">
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\GammaEngine\Renderer\Renderer2D.h">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\GammaEngine\Renderer\RendererAPI.h">
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClInclude>
@@ -1443,6 +1446,9 @@
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\Renderer\Renderer.cpp">
+      <Filter>src\GammaEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GammaEngine\Renderer\Renderer2D.cpp">
       <Filter>src\GammaEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\GammaEngine\Renderer\RendererAPI.cpp">
