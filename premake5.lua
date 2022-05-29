@@ -132,11 +132,6 @@ project "Sandbox"
 	filter "system:windows"
 		systemversion "latest"
 
-		defines
-		{
-			"GAMMAENGINE_PLATFORM_WINDOWS",
-		}
-
 	filter "configurations:Debug"
 		defines "GAMMAENGINE_DEBUG"
 		runtime "Debug"
