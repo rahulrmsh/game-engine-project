@@ -1,7 +1,7 @@
 #include "gammaenginepch.h"
 #include "WindowsInput.h"
 
-#include "GammaEngine/Application.h"
+#include "GammaEngine/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace GammaEngine {

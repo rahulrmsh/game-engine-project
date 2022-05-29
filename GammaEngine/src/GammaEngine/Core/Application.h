@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Core.h"
-#include "Events/Event.h"
+#include "GammaEngine/Events/Event.h"
 #include "Window.h"
 #include "GammaEngine/Events/ApplicationEvent.h"
-#include "GammaEngine/LayerStack.h"
+#include "GammaEngine/Core/LayerStack.h"
 #include "GammaEngine/Events/Event.h"
 #include "GammaEngine/Events/ApplicationEvent.h"
 #include "GammaEngine/ImGui/ImGuiLayer.h"
@@ -26,13 +26,11 @@ namespace GammaEngine {
 		
 
 	private:
-		bool OnWindowResize(WindowResizeEvent& e);
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
-		bool m_Minimized = false;
 		LayerStack m_LayerStack;
 		bool m_Minimized = false;
 		static Application* s_Instance;

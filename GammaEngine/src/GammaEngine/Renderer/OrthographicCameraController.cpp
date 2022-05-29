@@ -1,7 +1,7 @@
 #include "gammaenginepch.h"
 #include "OrthographicCameraController.h"
-#include "GammaEngine/Input.h"
-#include "GammaEngine/KeyCodes.h"
+#include "GammaEngine/Core/Input.h"
+#include "GammaEngine/Core/KeyCodes.h"
 
 namespace GammaEngine {
 	OrthographicCameraController::OrthographicCameraController(float aspectRatio,float rotation)

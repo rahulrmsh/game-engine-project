@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core.h"
+#include "GammaEngine/Core/Core.h"
 #include "gammaenginepch.h"
 
 namespace GammaEngine {

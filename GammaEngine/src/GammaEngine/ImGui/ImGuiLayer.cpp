@@ -8,7 +8,7 @@
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 
-#include "GammaEngine/Application.h"
+#include "GammaEngine/Core/Application.h"
 
 namespace GammaEngine {
 

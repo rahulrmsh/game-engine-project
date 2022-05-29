@@ -18,5 +18,5 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "GammaEngine/Log.h"
+#include "GammaEngine/Core/Log.h"
 

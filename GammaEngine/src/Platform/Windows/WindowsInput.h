@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GammaEngine/Input.h"
+#include "GammaEngine/Core/Input.h"
 
 namespace GammaEngine {
 

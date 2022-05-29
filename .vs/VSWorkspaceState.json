@@ -4,9 +4,8 @@
     "\\GammaEngine",
     "\\GammaEngine\\src",
     "\\GammaEngine\\src\\GammaEngine",
-    "\\GammaEngine\\vendor\\GLFW",
     "\\vendor"
   ],
-  "SelectedNode": "\\GammaEngine\\src\\GammaEngine\\Application.cpp",
+  "SelectedNode": "\\premake5.lua",
   "PreviewInSolutionExplorer": false
 }

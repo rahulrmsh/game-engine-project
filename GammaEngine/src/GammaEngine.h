@@ -1,15 +1,15 @@
 #pragma once
 
 // FOR USE BY GAMMA ENGINE APPLICATIONS
-#include "GammaEngine/Application.h"
-#include "GammaEngine/Log.h"
-#include "GammaEngine/Layer.h"
+#include "GammaEngine/Core/Application.h"
+#include "GammaEngine/Core/Log.h"
+#include "GammaEngine/Core/Layer.h"
 #include "GammaEngine/ImGui/ImGuiLayer.h"
-#include "GammaEngine/Input.h"
-#include "GammaEngine/KeyCodes.h"
-#include "GammaEngine/MouseButtonCodes.h"
+#include "GammaEngine/Core/Input.h"
+#include "GammaEngine/Core/KeyCodes.h"
+#include "GammaEngine/Core/MouseButtonCodes.h"
 #include "GammaEngine/Core/Timestep.h"
-#include "GammaEngine/OrthographicCameraController.h"
+#include "GammaEngine/Renderer/OrthographicCameraController.h"
 
 //-----Renderer--------
 #include "GammaEngine/Renderer/Renderer.h"
@@ -20,5 +20,5 @@
 #include "GammaEngine/Renderer/OrthographicCamera.h"
 #include "GammaEngine/Renderer/Texture.h"
 // ---Start Entry Point---
-#include "GammaEngine/EntryPoint.h"
+#include "GammaEngine/Core/EntryPoint.h"
 // ---End Entry Point---

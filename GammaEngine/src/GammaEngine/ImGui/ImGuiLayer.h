@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GammaEngine/Layer.h"
+#include "GammaEngine/Core/Layer.h"
 #include "GammaEngine/Events/ApplicationEvent.h"
 #include "GammaEngine/Events/KeyEvent.h"
 #include "GammaEngine/Events/MouseEvent.h"

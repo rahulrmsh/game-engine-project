@@ -145,32 +145,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\GammaEngine.h" />
-    <ClInclude Include="src\GammaEngine\Application.h" />
-    <ClInclude Include="src\GammaEngine\Core.h" />
+    <ClInclude Include="src\GammaEngine\Core\Application.h" />
+    <ClInclude Include="src\GammaEngine\Core\Core.h" />
+    <ClInclude Include="src\GammaEngine\Core\EntryPoint.h" />
+    <ClInclude Include="src\GammaEngine\Core\Input.h" />
+    <ClInclude Include="src\GammaEngine\Core\KeyCodes.h" />
+    <ClInclude Include="src\GammaEngine\Core\Layer.h" />
+    <ClInclude Include="src\GammaEngine\Core\LayerStack.h" />
+    <ClInclude Include="src\GammaEngine\Core\Log.h" />
+    <ClInclude Include="src\GammaEngine\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\GammaEngine\Core\Timestep.h" />
-    <ClInclude Include="src\GammaEngine\EntryPoint.h" />
+    <ClInclude Include="src\GammaEngine\Core\Window.h" />
     <ClInclude Include="src\GammaEngine\Events\ApplicationEvent.h" />
     <ClInclude Include="src\GammaEngine\Events\Event.h" />
     <ClInclude Include="src\GammaEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\GammaEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\GammaEngine\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\GammaEngine\Input.h" />
-    <ClInclude Include="src\GammaEngine\KeyCodes.h" />
-    <ClInclude Include="src\GammaEngine\Layer.h" />
-    <ClInclude Include="src\GammaEngine\LayerStack.h" />
-    <ClInclude Include="src\GammaEngine\Log.h" />
-    <ClInclude Include="src\GammaEngine\MouseButtonCodes.h" />
-    <ClInclude Include="src\GammaEngine\OrthographicCameraController.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Buffer.h" />
     <ClInclude Include="src\GammaEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\GammaEngine\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\GammaEngine\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\GammaEngine\Renderer\RenderCommand.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Renderer.h" />
     <ClInclude Include="src\GammaEngine\Renderer\RendererAPI.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Shader.h" />
     <ClInclude Include="src\GammaEngine\Renderer\Texture.h" />
     <ClInclude Include="src\GammaEngine\Renderer\VertexArray.h" />
-    <ClInclude Include="src\GammaEngine\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -598,15 +598,15 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\GammaEngine\Application.cpp" />
+    <ClCompile Include="src\GammaEngine\Core\Application.cpp" />
+    <ClCompile Include="src\GammaEngine\Core\Layer.cpp" />
+    <ClCompile Include="src\GammaEngine\Core\LayerStack.cpp" />
+    <ClCompile Include="src\GammaEngine\Core\Log.cpp" />
     <ClCompile Include="src\GammaEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\GammaEngine\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\GammaEngine\Layer.cpp" />
-    <ClCompile Include="src\GammaEngine\LayerStack.cpp" />
-    <ClCompile Include="src\GammaEngine\Log.cpp" />
-    <ClCompile Include="src\GammaEngine\OrthographicCameraController.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Buffer.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\GammaEngine\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\Renderer.cpp" />
     <ClCompile Include="src\GammaEngine\Renderer\RendererAPI.cpp" />

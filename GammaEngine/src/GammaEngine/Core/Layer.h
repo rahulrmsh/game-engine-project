@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GammaEngine/Core.h"
+#include "GammaEngine/Core/Core.h"
 #include "GammaEngine/Core/Timestep.h"
 #include "GammaEngine/Events/Event.h"
 

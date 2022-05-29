@@ -2,7 +2,7 @@
 
 #include "gammaenginepch.h"
 
-#include "GammaEngine/Core.h"
+#include "GammaEngine/Core/Core.h"
 #include "GammaEngine/Events/Event.h"
 
 namespace GammaEngine {

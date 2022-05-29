@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "GammaEngine/Core.h"
+#include "GammaEngine/Core/Core.h"
 
 namespace GammaEngine {
 

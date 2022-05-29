@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GammaEngine/Window.h"
+#include "GammaEngine/Core/Window.h"
 #include "GammaEngine/Renderer/GraphicsContext.h"
 #include <GLFW/glfw3.h>
 
