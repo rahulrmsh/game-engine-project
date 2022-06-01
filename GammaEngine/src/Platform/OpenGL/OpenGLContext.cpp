@@ -15,6 +15,7 @@ namespace GammaEngine {
 
 	void OpenGLContext::Init()
 	{
+		GAMMAENGINE_PROFILE_FUNCTION();
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		GAMMAENGINE_CORE_ASSERT(status, "Failed to initialize Glad!");
@@ -33,6 +34,7 @@ namespace GammaEngine {
 
 	void OpenGLContext::SwapBuffers()
 	{
+		GAMMAENGINE_PROFILE_FUNCTION();
 		glfwSwapBuffers(m_WindowHandle);
 	}
 

@@ -12,6 +12,7 @@ namespace GammaEngine {
 	
 	void OrthographicCameraController::OnUpdate(Timestep ts)
 	{
+		GAMMAENGINE_PROFILE_FUNCTION();
 		if (Input::IsKeyPressed(GAMMAENGINE_KEY_A))
 		{
 			m_CameraPosition.x -= cos(glm::radians(m_CameraRotation)) * m_CameraTranslationSpeed * ts;
@@ -51,6 +52,7 @@ namespace GammaEngine {
 
 	void OrthographicCameraController::OnEvent(Event& e)
 	{
+		GAMMAENGINE_PROFILE_FUNCTION();
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<MouseScrolledEvent>(GAMMAENGINE_BIND_EVENT_FN(OrthographicCameraController::OnMouseScrolled));
 		dispatcher.Dispatch<WindowResizeEvent>(GAMMAENGINE_BIND_EVENT_FN(OrthographicCameraController::OnWindowResized));
@@ -67,6 +69,7 @@ namespace GammaEngine {
 
 	bool OrthographicCameraController::OnWindowResized(WindowResizeEvent& e)
 	{
+		GAMMAENGINE_PROFILE_FUNCTION();
 		m_AspectRatio -= (float)e.GetWidth() /(float) e.GetHeight();
 		m_Camera.setProjection(-m_AspectRatio * m_ZoomLevel, m_AspectRatio * m_ZoomLevel, -m_ZoomLevel, m_ZoomLevel);
 		return false;

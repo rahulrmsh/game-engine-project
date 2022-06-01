@@ -23,11 +23,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\shaders\FlatColor.glsl" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="src\Sandbox2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GammaEngineProfile-Runtime.json" />
+    <None Include="GammaEngineProfile-Shutdown.json" />
+    <None Include="GammaEngineProfile-Startup.json" />
   </ItemGroup>
 </Project>

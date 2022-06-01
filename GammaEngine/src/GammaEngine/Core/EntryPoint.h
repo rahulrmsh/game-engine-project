@@ -7,12 +7,18 @@
 	int main(int argc, char** argv)
 	{
 		GammaEngine::Log::Init();
-		GAMMAENGINE_CORE_WARN("*** Initialized Core Log ***");
-		GAMMAENGINE_CLIENT_WARN("*** Initialized Client Log ***");
 
+		GAMMAENGINE_PROFILE_BEGIN_SESSION("Startup", "GammaEngineProfile-Startup.json");
 		auto app = GammaEngine::CreateApplication();
+		GAMMAENGINE_PROFILE_END_SESSION();
+
+		GAMMAENGINE_PROFILE_BEGIN_SESSION("Runtime", "GammaEngineProfile-Runtime.json");
 		app->Run();
+		GAMMAENGINE_PROFILE_END_SESSION();
+
+		GAMMAENGINE_PROFILE_BEGIN_SESSION("Startup", "GammaEngineProfile-Shutdown.json");
 		delete app;
+		GAMMAENGINE_PROFILE_END_SESSION();
 	}
 
 #else

@@ -19,4 +19,5 @@
 #include <unordered_set>
 
 #include "GammaEngine/Core/Log.h"
+#include "GammaEngine/Debug/Instrumentor.h"
 
