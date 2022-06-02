@@ -4,6 +4,8 @@
 
 namespace GammaEngine {
 
+	
+
 	class OrthographicCamera
 	{
 	public:
