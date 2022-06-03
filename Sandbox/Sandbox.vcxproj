@@ -150,11 +150,6 @@
       <Project>{DE93EA74-4A49-636A-D33D-5D413FF2596E}</Project>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="GammaEngineProfile-Runtime.json" />
-    <None Include="GammaEngineProfile-Shutdown.json" />
-    <None Include="GammaEngineProfile-Startup.json" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
